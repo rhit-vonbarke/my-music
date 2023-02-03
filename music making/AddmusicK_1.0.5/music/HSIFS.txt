@@ -1,0 +1,49 @@
+#samples
+{
+	"6_25pulse.brr"
+	"12_5pulse.brr"
+	"43_75pulse.brr"
+	"50pulse.brr"
+	"bass.brr"
+	"brass.brr"
+	"guitar.brr" 
+	"marimba.brr"
+	"orchestra_hit.brr"
+	"sawtooth.brr"
+}
+
+#instruments
+{
+	"6_25pulse.brr" $8F $E0 $00 $04 $02; @30
+	"12_5pulse.brr" $8F $E0 $00 $04 $03; @31
+	"43_75pulse.brr" $8F $E0 $00 $04 $03; @32
+	"50pulse.brr" $8F $E0 $00 $04 $03; @33
+	"bass.brr" $AF $69 $00 $09 $08; @34
+	"brass.brr" $9B $A1 $00 $08 $07; @35
+	"guitar.brr" $BF $A7 $00 $06 $05; @36
+	"marimba.brr" $BF $36 $00 $08 $06; @37
+	"orchestra_hit.brr" $AF $2D $00 $08 $00; @38
+	"sawtooth.brr" $8F $E0 $00 $08 $06; @39
+}
+
+#amk 2
+t90 w255;
+
+#0
+@39v255o3 ;c1^1^1^1^1^1^1^1
+;r1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1
+e8 a8 b+8 e8 a8 b+8 e8 a8 b8 e8 a8 b8 e8 a8 b8 a8 c8 f8 a8 c8 g8 a8 c8 f8 c8 a8 c8 f8 g8 a8 f8 g8
+
+
+
+#1
+@36v0o3 d8 d8 > d4 < g8$DD $00 $24 $A1^4  g+4 g4 f4 d8 f8 g8 
+c8 c8 > d4 < g8$DD $00 $24 $A1^4 g+4 g4 f4 d8 f8 g8 <
+b8 b8 >> d4 < g8$DD $00 $24 $A1^4 g+4 g4 f4 d8 f8 g8 <
+a+8 a+8 >> d4 < g8$DD $00 $24 $A1^4 g+4 g4 f4 d8 f8 g8
+
+#2 
+@36v0o4 d16 f16 a16 f16 d16 f16 a16 f16 d16 f16 a16 f16 d16 f16 a16 f16 d16 f16 a16 f16 d16 f16 a16 f16 d16 f16 a16 f16 d16 f16 a16 f16
+c16 f16 a16 f16 c16 f16 a16 f16 c16 f16 a16 f16 c16 f16 a16 f16 c16 f16 a16 f16 c16 f16 a16 f16 c16 f16 a16 f16 c16 f16 a16 f16
+d16 g16 b16 g16 d16 g16 b16 g16 d16 g16 b16 g16 d16 g16 b16 g16 d16 g16 b16 g16 d16 g16 b16 g16 d16 g16 b16 g16 d16 g16 b16 g16
+d16 f16 a+16 f16 d16 f16 a+16 f16 d16 f16 a+16 f16 d16 f16 a+16 f16 e16 g16 >c16< g16 e16 g16 >c16< g16 e16 g16 >c16< g16 e16 g16 >c16< g16

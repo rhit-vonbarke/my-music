@@ -1,0 +1,80 @@
+@startuml
+class JoustMain {
+levelNum
+loadCurrentLevel()
+startLevel()
+}
+
+abstract class Moveable {
+color
+x
+y
+xVelocity
+yVelocity
+size
+isGrounded
+maxSpeed
+toDelete
+drawOn(Graphics2D g)
+updatePosition(Level level)
+checkFloors(Level level)
+checkCeiling(Level level)
+checkRightWalls(Level level)
+checkLeftWalls(Level level)
+jump()
+applyFriction() 
+applyGravity()
+onCollision(Player p)
+}
+
+class Player extends Moveable {
+score
+lives
+scoreForLife
+dead
+updatePosition(Level level)
+checkCollisions(ArrayList<Movable> objects)
+moveWithInput()
+die()
+addToScore(int toAdd)
+dash()
+}
+
+class Enemy extends Moveable {
+scoreToGive
+directionFacing
+actionTimer
+baseActionDelay
+maxActionDelay
+target
+moveWithStrategy()
+die(Player p)
+}
+
+class Bounder extends Enemy {
+}
+
+class Hunter extends Enemy {
+moveWithStrategy() 
+fire()
+}
+
+class Flyer extends Enemy {
+moveWithStrategy()
+attack()
+fire(int[] direction)
+}
+
+class Egg extends Enemy {
+scoreToGive
+respawnTimer
+initialTimer
+respawn()
+}
+
+JoustMain ->"*" Moveable
+JoustMain -> Player
+JoustMain ->"*" Enemy
+Enemy ->"*" Enemy
+Enemy ->"*" Moveable
+@enduml

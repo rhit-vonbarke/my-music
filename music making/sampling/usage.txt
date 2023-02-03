@@ -1,0 +1,5 @@
+drop spc file(s) in same folder as tool, run split700_batch.bat to extract all samples, then play back the BRRs using BRRplayer, so you can preview them without any hassle.
+
+Edit the bat and remove "--force" if it ever outputs a set that has massive leaps between any functionally good samples (such as Dracula X).
+
+Can also convert them to wav by just dropping the output BRRs over brr2wav.

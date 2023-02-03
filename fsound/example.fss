@@ -1,0 +1,103 @@
+t105
+
+> the first line must be the speed
+> bigger number = slower song
+> tempo is set with t followed by a number
+> you can do this anywhere in your song
+
+> lines starting with a > are a comment
+> like this
+> empty lines will be ignored
+
+> notes are specified as [note] [octave] [length] [volume]
+
+> note can be: a b c d e f g A C D F G x
+> uppercase indicates a sharp note
+> x plays white noise
+
+> octave can range from 1 to 7
+
+> length can be: 1 2 4 8 f
+> where 1 is a semibreve (whole-note)
+> 2 is a minim (half-note)
+> 4 is a crotchet (quarter-note)
+> 8 is a quaver (eighth-note)
+> f is a semiquaver (sixteenth-note)
+> g is a demisemiquaver (thirty-secondth-note)
+> t is a triplet
+
+> volume ranges from 0 to f
+> default volume can be set with v followed by 0 to f
+> default volume when none has been set is a
+
+va
+
+> rests are specified as r-[length]
+> the length values are the same as above
+
+> Loops: Start a loop with LS. End a loop with Lx, where x 
+> is the number of times to play the song, from 2 to 9.
+> A loop may NOT contain another loop
+
+> you can use a line break or a semicolon to separate notes/commands
+
+
+LS
+c4fa;r-f
+c4f1;r-f
+c5fa;r-f
+c5f1;r-f
+c4fa;r-f
+c4f1;r-f
+c58a
+g48a
+L2
+
+LS
+g4fa;r-f
+g4f1;r-f
+g5fa;r-f
+g5f1;r-f
+g4fa;r-f
+g4f1;r-f
+g58a
+d58a
+L2
+
+LS
+t10;x-f;t105
+c4fa;r-f
+c4f1;r-f
+t10;x-f;t105
+c5fa;r-f
+c5f1;r-f
+t10;x-f;t105
+c4fa;r-f
+c4f1;r-f
+t10;x-f;t105
+c58a
+g48a
+L2
+
+LS
+t10;x-f;t105
+f4fa;r-f
+f4f1;r-f
+t10;x-f;t105
+f5fa;r-f
+f5f1;r-f
+t10;x-f;t105
+f4fa;r-f
+f4f1;r-f
+t10;x-f;t105
+f58a
+c58a
+L2
+
+
+> DRUMS : drums are specified as [drum] - [length]
+> at the moment the only drums you can use are K (kick) and S (snare)
+
+LS
+K-8;r-8;S-4;r-8;r-8;K-8;S-4;
+L4

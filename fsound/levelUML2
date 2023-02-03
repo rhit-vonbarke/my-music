@@ -1,0 +1,44 @@
+@startuml
+class JoustMain {
+levelNum
+loadCurrentLevel()
+startLevel()
+}
+
+class DataLoader {
+loadAllLevels()
+parseIntoLevel(String toParse)
+charToTiles(char[][] chars)
+}
+
+class Level {
+id
+levelType
+drawOn(Graphics2D g)
+}
+
+abstract class Tile {
+passable
+standable
+spawnable
+lethal
+color
+drawOn(Graphics2D g, x, y, size)
+}
+
+class Empty extends Tile {
+}
+
+class Ground extends Tile {
+}
+
+class Lava extends Tile {
+}
+
+class SpawnPlatform extends Tile {
+}
+
+JoustMain -> DataLoader
+JoustMain ->"*" Level
+Level ->"*" Tile
+@enduml
